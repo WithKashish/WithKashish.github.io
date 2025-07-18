@@ -15,15 +15,17 @@
 <!-- Navigation -->
  <header class="navbar">
     <div class="nav-left">WithKashish</div>
-    <nav class="nav-center" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="booking.html">Book a Session</a>
-    </nav>
+  <nav class="nav-center" id="nav-links">
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="workshops.html" onclick="closeMenu()">Workshops</a>
+  <a href="booking.html" onclick="closeMenu()">Book a Session</a>
+</nav>
+
 <button class="nav-right" onclick="toggleMenu()" aria-label="Toggle menu">
   <i class="fas fa-bars"></i>
 </button>
+
 
 
   </header>
@@ -198,10 +200,14 @@
 
 <script>
   function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    nav.classList.toggle("show-menu");
+    document.getElementById("nav-links").classList.toggle("show-menu");
+  }
+
+  function closeMenu() {
+    document.getElementById("nav-links").classList.remove("show-menu");
   }
 </script>
+
 
 </body>
 </html>

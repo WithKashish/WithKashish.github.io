@@ -317,3 +317,32 @@ body {
     justify-content: center;
   }
 }
+/* Mobile menu toggle styles */
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .nav-center.show-menu {
+    display: flex;
+  }
+
+  .nav-right {
+    display: block;
+  }
+}
+
+/* Make sure nav-right (hamburger) is hidden by default on desktop */
+.nav-right {
+  display: none;
+}
+

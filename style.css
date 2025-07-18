@@ -345,4 +345,8 @@ body {
 .nav-right {
   display: none;
 }
+.nav-right {
+  background: none;
+  border: none;
+}
 

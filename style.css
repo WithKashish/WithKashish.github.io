@@ -42,31 +42,6 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav-center {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    display: none;
-    border-bottom: 1px solid #e0e0e0;
-    z-index: 999;
-  }
-
-  .nav-center.show {
-    display: flex;
-  }
-
-  .nav-right {
-    display: block;
-  }
-}
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -301,6 +276,21 @@ body {
 .social-icons a:hover {
   color: #5e3e9c;
 }
+/* Desktop default nav styles */
+.nav-center {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.nav-right {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
   .footer-container {
@@ -322,14 +312,16 @@ body {
   .nav-center {
     display: none;
     flex-direction: column;
+    align-items: center;
     background-color: #fff;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     padding: 1rem 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .nav-center.show-menu {
@@ -341,12 +333,5 @@ body {
   }
 }
 
-/* Make sure nav-right (hamburger) is hidden by default on desktop */
-.nav-right {
-  display: none;
-}
-.nav-right {
-  background: none;
-  border: none;
-}
+
 
